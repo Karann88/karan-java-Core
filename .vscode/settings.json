@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\karan\\Downloads\\mysql-connector-j-9.2.0\\mysql-connector-j-9.2.0\\mysql-connector-j-9.2.0.jar"
+    ],
+    "java.project.sourcePaths": [
+        "Trees/TreeQuestions",
+        "Java8/src",
+        ""
+    ],
+    "C_Cpp.default.compilerPath": "c:\\Users\\karan\\OneDrive\\Desktop\\java\\Basic1.c"
+}
