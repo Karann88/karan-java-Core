@@ -1,7 +1,8 @@
+package Functions_In_Java;
 import java.util.*;
 
 // import java.lang.Math;
-public class Functions {
+public class Main {
     // public static void printMyname(String name) {
     // System.out.println(name);
     // return;

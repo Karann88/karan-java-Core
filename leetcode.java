@@ -1,4 +1,4 @@
-public class program {
+public class leetcode {
     // 7. Reverse Integer
     public static void main(String[] args) {
         // int num = 120;

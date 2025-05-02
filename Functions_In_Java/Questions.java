@@ -1,8 +1,9 @@
+package Functions_In_Java;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Rev {
+public class Questions {
     public static void main(String[] args) {
 
         int[] arr = { 2, 7, 11, 14, 20, 22 };

@@ -16,14 +16,15 @@ public class CircularQueue {
         this.data = new int[size];
     }
 
-    public boolean insert(int item) {
+    public int insert(int item) {
         if (isFull()) {
-            return false;
+            return -1; // Indicate that the queue is full
         }
         data[end++] = item;
-        end = end % data.length;
+        end = end % data.length; 
         size++;
-        return true;
+        // return true; // Indicate that the item was inserted successfully
+        return item; // Return the inserted item instead of true/false
     }
 
     public int remove() throws Exception {

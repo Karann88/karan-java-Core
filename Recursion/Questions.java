@@ -2,7 +2,7 @@ package Recursion;
 
 public class Questions {
     public static void main(String[] args) {
-        
+
         // System.out.println(fact(5));
         // System.out.println(sumOfDigits(1342));
         // reverse(1342);
@@ -55,12 +55,12 @@ public class Questions {
     // }
 
     // Que:- Find the unique number in the array.
-        static int ans (int[] arr) {
-            int unique = 0;
+    static int ans(int[] arr) {
+        int unique = 0;
 
-            for(int n : arr) {
-                unique ^= n;
-            }
-            return unique;
+        for (int n : arr) {
+            unique ^= n;
         }
+        return unique;
+    }
 }

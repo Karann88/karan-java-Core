@@ -14,12 +14,18 @@ public class CustomQueue {
         this.data = new int[size];
     }
 
-    public boolean insert(int item) {
+    public int insert(int item) {
+        // if (isFull()) {
+        //     return -1;
+        // }
+        // data[end++] = item;
+        // return true;
+        // return item; // Return the inserted item instead of true/false
         if (isFull()) {
-            return false;
+            return -1; // Indicate that the queue is full
         }
         data[end++] = item;
-        return true;
+        return item; // Return the inserted item
     }
 
     public int remove() throws Exception {

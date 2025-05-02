@@ -26,7 +26,7 @@ public class Print {
 
     // Merge the both functions
     static void funBoth(int n) {
-        if(n == 0) {
+        if (n == 0) {
             return;
         }
         System.out.println(n);

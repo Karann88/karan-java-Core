@@ -50,27 +50,29 @@ public class sorting {
 
         // Program to print second largest number in array.
 
-    //     int[] a = { 1, 2, 5, 6, 3, 2 };
+        int[] a = { 1, 2, 5, 6, 3, 2 };
     //     int[] b = { 44, 66, 99, 77, 33, 22, 55 };
         
-    //     int result = getSecondLargest(a, a.length);
+        int result = getSecondLargest(a, a.length);
     //     int res = getSecondLargest(b, b.length);
-    //     System.out.println("Second Largest number " + result);
+        System.out.println("Second Largest number " + result);
     //     System.out.println("Second largest number " + res);
 
-    // }
+    }
 
-    // static int getSecondLargest(int[] a, int size) {
-    //     for (int i = 0; i < size; i++) {
-    //         for (int j = i + 1; j < size; j++) {
-    //             if (a[i] > a[j]) {
-    //                 int temp = a[i];
-    //                 a[i] = a[j];
-    //                 a[j] = temp;
-    //             }
-    //         }
-    //     }
-    //     return a[size - 2];
+    static int getSecondLargest(int[] a, int size) {
+        for (int i = 0; i <= a.length - 2; i++) {
+            for (int j = i + 1; j > 0; j--) {
+                if (a[j] < a[j - 1]) {
+                    int temp = a[j];
+                    a[j] = a[j - 1];
+                    a[j - 1] = temp;
+                } else {
+                    break;
+                }
+            }
+        }
+        return a[size - 2];
 
     // Program to print Second Smallset number in array.
 
@@ -93,20 +95,20 @@ public class sorting {
     //     }
     //     return arr[size-2];
 
-    ArrayList<Integer> list = new ArrayList<>(5);
-    list.add(43);
-    list.add(21);
-    list.add(11);
-    list.add(89);
-    list.add(32);
-    list.add(76);
-    list.add(52);
-    list.add(4);
-    list.add(65);
+    // ArrayList<Integer> list = new ArrayList<>(5);
+    // list.add(43);
+    // list.add(21);
+    // list.add(11);
+    // list.add(89);
+    // list.add(32);
+    // list.add(76);
+    // list.add(52);
+    // list.add(4);
+    // list.add(65);
 
-    list.set(3, 11);
-    list.remove(3);
-    list.remove(6);
-    System.out.println(list);
+    // list.set(3, 11);
+    // list.remove(3);
+    // list.remove(6);
+    // System.out.println(list);
     }
 }

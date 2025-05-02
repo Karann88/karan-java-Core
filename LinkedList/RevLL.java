@@ -469,11 +469,11 @@ public class RevLL {
 
     public static void main(String[] args) {
         RevLL list = new RevLL();
-        // list.insertLast(1);
-        // list.insertLast(2);
-        // list.insertLast(3);
-        // list.insertLast(4);
-        // list.insertLast(5);
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(3);
+        list.insertLast(4);
+        list.insertLast(5);
         // list.insertLast();
         // list.insert(45, 3);
         // list.insertRec(44, 3);
@@ -518,8 +518,8 @@ public class RevLL {
         // list.reverse();
         // list.display();
 
-        // list.rev();
-        // list.display();
+        list.rev();
+        list.display();
 
         // list.subLL();
         // list.display();
@@ -533,16 +533,16 @@ public class RevLL {
 
         // list.isPalindrome();
         // list.display();
-        list.insertLast(1);
-        list.insertLast(2);
-        list.insertLast(3);
-        list.insertLast(4);
-        list.insertLast(5);
-        list.insertLast(6);
+        // list.insertLast(1);
+        // list.insertLast(2);
+        // list.insertLast(3);
+        // list.insertLast(4);
+        // list.insertLast(5);
+        // list.insertLast(6);
         // list.insertLast(7);
         // list.insertLast(8);
         // list.insertLast(9);
-        list.display();
+        // list.display();
 
         // list.reorderList();
         // list.display();
@@ -553,8 +553,8 @@ public class RevLL {
         // list.reverseAlternateKGroup(3);
         // list.display();
 
-        list.rotateRight(2);
-        list.display();
+        // list.rotateRight(2);
+        // list.display();
     }
 
     private class Node {

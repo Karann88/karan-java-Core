@@ -1,6 +1,7 @@
 package Recursion;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Recur4 {
     public static void main(String[] args) {
@@ -13,10 +14,16 @@ public class Recur4 {
         // subseq("", "abc");
         // subseqAscii("", "abc");
 
-        ArrayList<String> list = subseqRet("", "abc");
-        System.out.println(list);
+        // ArrayList<String> list = subseqRet("", "abc");
+        // System.out.println(list);
 
         // System.out.println(subseqAsciiRet("", "abc"));
+
+        int[] arr = { 1, 2, 3 };
+        List<List<Integer>> ans = subset(arr);
+        for (List<Integer> list : ans) {
+            System.out.println(list);
+        }
     }
 
     // static void skip(String p, String up) {
@@ -65,7 +72,7 @@ public class Recur4 {
     // }
     // char ch = up.charAt(0);
 
-    // if (up.startsWith("app") && !up.startsWith("appel")) {
+    // if (up.startsWith("app") && !up.startsWith("apple")) {
     // return skipApp(up.substring(3));
     // } else {
     // return ch + skipApp(up.substring(1));
@@ -73,70 +80,85 @@ public class Recur4 {
     // }
 
     // static void subseq(String p, String up) {
-    //     if (up.isEmpty()) {
-    //         System.out.println(p);
-    //         return;
-    //     }
-    //     char ch = up.charAt(0);
+    // if (up.isEmpty()) {
+    // System.out.println(p);
+    // return;
+    // }
+    // char ch = up.charAt(0);
 
-    //     subseq(p + ch, up.substring(1));
-    //     subseq(p, up.substring(1));
+    // subseq(p + ch, up.substring(1));
+    // subseq(p, up.substring(1));
     // }
 
     // static void subseqAscii(String p, String up) {
-    //     if (up.isEmpty()) {
-    //         System.out.println(p);
-    //         return;
-    //     }
-    //     char ch = up.charAt(0);
+    // if (up.isEmpty()) {
+    // System.out.println(p);
+    // return;
+    // }
+    // char ch = up.charAt(0);
 
-    //     subseqAscii(p + ch, up.substring(1));
-    //     subseqAscii(p, up.substring(1));
-    //     subseqAscii(p + (ch + 0), up.substring(1));
+    // subseqAscii(p + ch, up.substring(1));
+    // subseqAscii(p, up.substring(1));
+    // subseqAscii(p + (ch + 0), up.substring(1));
     // }
 
-    static ArrayList<String> subseqRet(String p, String up) {
-        if (up.isEmpty()) {
-            ArrayList<String> list = new ArrayList<>();
-            list.add(p);
-            return list;
-        }
-        char ch = up.charAt(0);
+    // static ArrayList<String> subseqRet(String p, String up) {
+    // if (up.isEmpty()) {
+    // ArrayList<String> list = new ArrayList<>();
+    // list.add(p);
+    // return list;
+    // }
+    // char ch = up.charAt(0);
 
-        ArrayList<String> left = subseqRet(p + ch, up.substring(1));
-        ArrayList<String> right = subseqRet(p, up.substring(1));
+    // ArrayList<String> left = subseqRet(p + ch, up.substring(1));
+    // ArrayList<String> right = subseqRet(p, up.substring(1));
 
-        left.addAll(right);
+    // left.addAll(right);
 
-        return left;
-    }
+    // return left;
+    // }
 
     // static ArrayList<String> subseqAsciiRet(String p, String up) {
-    //     if (up.isEmpty()) {
-    //         ArrayList<String> list = new ArrayList<>();
-    //         list.add(p);
-    //         return list;
-    //     }
-    //     char ch = up.charAt(0);
+    // if (up.isEmpty()) {
+    // ArrayList<String> list = new ArrayList<>();
+    // list.add(p);
+    // return list;
+    // }
+    // char ch = up.charAt(0);
 
-    //     ArrayList<String> first = subseqAsciiRet(p + ch, up.substring(1));
-    //     ArrayList<String> second = subseqAsciiRet(p, up.substring(1));
-    //     ArrayList<String> third = subseqAsciiRet(p + (ch+0), up.substring(1));
+    // ArrayList<String> first = subseqAsciiRet(p + ch, up.substring(1));
+    // ArrayList<String> second = subseqAsciiRet(p, up.substring(1));
+    // ArrayList<String> third = subseqAsciiRet(p + (ch+0), up.substring(1));
 
-    //     first.addAll(second);
-    //     first.addAll(third);
+    // first.addAll(second);
+    // first.addAll(third);
 
-    //     return first;
+    // return first;
     // }
 
     // static void subseq(String p, String up) {
-    //     if (up.isEmpty()) {
-    //         System.out.println(p);
-    //         return;
-    //     }
-    //     char ch = up.charAt(0);
-
-    //     subseq(p + ch, up.substring(1));
-    //     subseq(p, up.substring(1));
+    // if (up.isEmpty()) {
+    // System.out.println(p);
+    // return;
     // }
+    // char ch = up.charAt(0);
+
+    // subseq(p + ch, up.substring(1));
+    // subseq(p, up.substring(1));
+    // }
+
+    static List<List<Integer>> subset(int[] arr) {
+        List<List<Integer>> outer = new ArrayList<>();
+        outer.add(new ArrayList<>());
+
+        for (int num : arr) {
+            int n = outer.size();
+            for (int i = 0; i < n; i++) {
+                List<Integer> internal = new ArrayList<>(outer.get(i));
+                internal.add(num);
+                outer.add(internal);
+            }
+        }
+        return outer;
+    }
 }

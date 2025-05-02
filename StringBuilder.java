@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class SB {
+public class StringBuilder {
     public static void main(String[] args) {
 
         // StringBuilder is defined as only an object is made and changes in done only that object only.

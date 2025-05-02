@@ -6,55 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "User",
-            "request": "launch",
-            "mainClass": "User",
-            "projectName": "java_9ba14fbb"
-        },
-        {
-            "type": "java",
-            "name": "MyClass",
-            "request": "launch",
-            "mainClass": "MyClass",
-            "projectName": "java_9ba14fbb"
-        },
-        {
-            "type": "java",
-            "name": "ThreadDemo",
-            "request": "launch",
-            "mainClass": "LambdaExp.ThreadDemo",
-            "projectName": "java_9ba14fbb"
-        },
-        {
-            "type": "java",
-            "name": "InterviewFav",
-            "request": "launch",
-            "mainClass": "LambdaExp.InterviewFav",
-            "projectName": "java_9ba14fbb"
-        },
-        {
-            "type": "java",
-            "name": "MyWindow",
-            "request": "launch",
-            "mainClass": "LambdaExp.MyWindow",
-            "projectName": "java_9ba14fbb"
-        },
-        {
-            "type": "java",
-            "name": "Start",
-            "request": "launch",
-            "mainClass": "Start",
-            "projectName": "java_9ba14fbb"
-        },
-        {
-            "type": "java",
-            "name": "Karan",
-            "request": "launch",
-            "mainClass": "Recursion.Karan",
-            "projectName": "java_9ba14fbb"
-        },
-        {
-            "type": "java",
             "name": "Recur5",
             "request": "launch",
             "mainClass": "Recursion.Recur5",

@@ -1,8 +1,11 @@
 import java.util.*;
 
-public class Main1 {
+public class Start {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int res = fac(5);
+        System.out.println(res);
+
         // int i;
         // int a = sc.nextInt();
         // int b = sc.nextInt();
@@ -154,5 +157,15 @@ public class Main1 {
          * }
          */
 
+        //  char ch = 'a';
+        //  System.out.println(ch + 0);
+
+        
+    }
+    static int fac(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * fac(n - 1);
     }
 }
