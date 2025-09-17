@@ -72,13 +72,16 @@ public class BST {
         }
     }
 
-    // for Sorted Array:- If we perform simple BST method it'll be O(n^2) time complexity and skewed tree.
-    // So we need to use the divide and conquer method to make it O(n) time complexity.
+    // for Sorted Array:- If we perform simple BST method it'll be O(n^2) time
+    // complexity and skewed tree.
+    // So we need to use the divide and conquer method to make it O(n) time
+    // complexity.
     // This method will create a balanced BST.
     // 1. Find the middle element of the array.
     // 2. Insert the middle element into the BST.
     // 3. Recursively do the same for the left half and right half of the array.
-    // 4. The base case for the recursion is when the start index is greater than the end index.
+    // 4. The base case for the recursion is when the start index is greater than
+    // the end index.
     public void populateSorted(int[] nums) {
         populateSorted(nums, 0, nums.length);
     }
@@ -117,5 +120,18 @@ public class BST {
 
         display(node.left, "Left child of " + node.value + " : ");
         display(node.right, "Right child of " + node.value + " : ");
+    }
+
+    // Deletion in BST
+    // 1. Find the node to be deleted.
+    // 2. If the node has no children, delete the node.
+    // 3. If the node has one child, replace the node with its child.
+    // 4. If the node has two children, find the inorder successor of the node (the
+    
+    public void delete() {
+        root = delete(value, root);
+    }
+    public Node delete(int value, Node node) {
+        return node;
     }
 }

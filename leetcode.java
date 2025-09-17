@@ -1,3 +1,7 @@
+import java.lang.StringBuilder;
+import java.util.Arrays;
+import java.util.Stack;
+
 public class leetcode {
     // 7. Reverse Integer
     public static void main(String[] args) {
@@ -8,8 +12,36 @@ public class leetcode {
         // String s = "Hello World";
         // System.out.println("Length of last word is: " + lengthOfLastWord(s));
 
-        int res = romanToInt("LVIII");
-        System.out.println(res);
+        // int res = romanToInt("LVIII");
+        // System.out.println(res);
+
+        // String num = "1432219";
+        // int k = 3;
+        // String ans = removeKdigits("1432219", 3);
+        // System.out.println(ans);
+
+        // int[] asteroids = { 5, 10, -5 };
+        // int[] ans = asteroidCollision(asteroids);
+        // System.out.println("Asteroid Collision Result: " + Arrays.toString(ans));
+
+        // int[] nums = { 1, 1, 0, 0, 1, 1, 0, 1 };
+        // int k = 2;
+        // int maxLength = longestOnes(nums, k);
+        // System.out.println("Max consecutive ones with " + k + " flips: " +
+        // maxLength);
+
+        // int[] nums = { 1, 1, 2, 1, 1 };
+        // int k = 3;
+        // int ans = numberOfsubarrays(nums, k);
+        // System.out.println("Number of subarrays with " + k + " distinct elements: " + ans);
+
+        int[][] matrix = {
+                { 1, 1, 1 },
+                { 1, 0, 1 },
+                { 1, 1, 1 }
+        };
+        setZeroes(matrix);
+        System.out.println("Matrix after setting zeroes:");
     }
 
     static long reversed = 0;
@@ -67,6 +99,7 @@ public class leetcode {
         }
         return result;
     }
+
     private static int getRomanValue(char c) {
         switch (c) {
             case 'I':
@@ -87,4 +120,124 @@ public class leetcode {
                 return 0;
         }
     }
+
+    // https://leetcode.com/problems/remove-k-digits/
+    public static String removeKdigits(String num, int k) {
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < num.length(); i++) {
+            while (!stack.isEmpty() && k > 0 && (stack.peek() - '0') > (num.charAt(i) - '0')) {
+                stack.pop();
+                k--;
+            }
+            stack.push(num.charAt(i));
+        }
+        while (k > 0 && !stack.isEmpty()) {
+            stack.pop();
+            k--;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
+        sb.reverse();
+
+        while (sb.length() > 0 && sb.charAt(0) == '0') {
+            sb.deleteCharAt(0);
+        }
+        return sb.length() > 0 ? sb.toString() : "0";
+    }
+
+    // https://leetcode.com/problems/asteroid-collision/
+    public static int[] asteroidCollision(int[] asteroids) {
+        Stack<Integer> stack = new Stack<>();
+
+        for (int asteroid : asteroids) {
+            if (asteroid > 0) {
+                stack.push(asteroid);
+            } else {
+                while (!stack.isEmpty() && stack.peek() > 0 && stack.peek() < Math.abs(asteroid)) {
+                    stack.pop();
+                }
+                if (!stack.isEmpty() && stack.peek() == Math.abs(asteroid)) {
+                    stack.pop();
+                } else if (stack.isEmpty() || stack.peek() < 0) {
+                    stack.push(asteroid);
+                }
+            }
+        }
+        int[] result = new int[stack.size()];
+        for (int i = result.length - 1; i >= 0; i--) {
+            result[i] = stack.pop();
+        }
+        return result;
+    }
+
+    // https://leetcode.com/problems/max-consecutive-ones-iii/
+    public static int longestOnes(int[] nums, int k) {
+        int start = 0, end = 0;
+        int flip = 0, maxLength = 0;
+
+        while (end < nums.length) {
+            if (nums[end] == 0)
+                flip++;
+            while (flip > k) {
+                if (nums[start] == 0)
+                    flip--;
+                start++;
+            }
+            end++;
+            maxLength = Math.max(maxLength, end - start);
+        }
+        return maxLength;
+    }
+
+    // https://leetcode.com/problems/count-number-of-nice-subarrays/
+    public static int numberOfsubarrays(int[] nums, int k) {
+        int start = 0, end = 0;
+        int ans = 0, odd = 0;
+
+        while (end < nums.length) {
+            if (nums[end] % 2 == 1)
+                odd++;
+            while (odd > k) {
+                if (nums[start] % 2 == 1)
+                    odd--;
+                start++;
+            }
+            ans += end - start + 1;
+            end++;
+        }
+        return ans;
+    }
+
+    // https://leetcode.com/problems/set-matrix-zeroes/
+    public static void setZeroes(int[][] matrix) {
+        int n = matrix.length;
+        int m = matrix[0].length;
+
+        int[] row = new int[n];
+        int[] col = new int[m];
+
+        // First pass to find all zeroes
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] == 0) {
+                    row[i] = 1; // Mark the row
+                    col[j] = 1; // Mark the column
+                }
+            }
+        }
+
+        // Second pass to set zeroes
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (row[i] == 1 || col[j] == 1) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+
 }

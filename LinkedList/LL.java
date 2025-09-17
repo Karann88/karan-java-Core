@@ -487,8 +487,8 @@ public class LL {
         while (temp != null) {
             len++;
             temp = temp.next;
-            }
-            return len;
+        }
+        return len;
     }
 
     public void reverseKGroup() {

@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "kk",
+            "request": "launch",
+            "mainClass": "kk",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "leetcode",
+            "request": "launch",
+            "mainClass": "leetcode",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Questions",
+            "request": "launch",
+            "mainClass": "LeetCode.src.Questions",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "SubString",
+            "request": "launch",
+            "mainClass": "LeetCode.src.SubString",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "OccurenceOfString",
+            "request": "launch",
+            "mainClass": "LeetCode.src.OccurenceOfString",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
             "name": "User",
             "request": "launch",
             "mainClass": "User",

@@ -54,16 +54,16 @@ public class Questions1 {
         // System.out.println(stack.pop());
         // System.out.println(stack.pop());
 
-        // boolean ans = validParantheses("([])");
-        // System.out.println(ans);
+        boolean ans = validParantheses("[{()}]");
+        System.out.println(ans);
 
         // System.out.println(minAddToMakeValid("(()))"));
 
         // String ans = decodeString("3[a]2[bc]");
         // System.out.println(ans);
 
-        int[] nums = { 3, 1, 4, 2 };
-        System.out.println(find132pattern(nums));
+        // int[] nums = { 3, 1, 4, 2 };
+        // System.out.println(find132pattern(nums));
 
         // myCircularQueue queue = new myCircularQueue(3);
         // System.out.println(queue.enQueue(1));
@@ -183,31 +183,31 @@ public class Questions1 {
     // }
 
     // Valid Parantheses.
-    // public static boolean validParantheses(String s) {
-    // Stack<Character> stack = new Stack<>();
+    public static boolean validParantheses(String s) {
+        Stack<Character> stack = new Stack<>();
 
-    // for (char ch : s.toCharArray()) {
-    // if (ch == '(' || ch == '{' || ch == '[') {
-    // stack.push(ch);
-    // }
-    // if (ch == ')') {
-    // if (stack.isEmpty() || stack.peek() != '(') {
-    // return false;
-    // }
-    // }
-    // if (ch == ']') {
-    // if (stack.isEmpty() || stack.peek() != '[') {
-    // return false;
-    // }
-    // }
-    // if (ch == '}') {
-    // if (stack.isEmpty() || stack.peek() != '{') {
-    // return false;
-    // }
-    // }
-    // }
-    // return stack.isEmpty();
-    // }
+        for (char ch : s.toCharArray()) {
+            if (ch == '(' || ch == '{' || ch == '[') {
+                stack.push(ch);
+            }
+            if (ch == ')') {
+                if (stack.isEmpty() || stack.pop() != '(') {
+                    return false;
+                }
+            }
+            if (ch == ']') {
+                if (stack.isEmpty() || stack.pop() != '[') {
+                    return false;
+                }
+            }
+            if (ch == '}') {
+                if (stack.isEmpty() || stack.pop() != '{') {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
 
     // public static int minAddToMakeValid(String s) {
     // Stack<Character> stack = new Stack<>();
@@ -263,28 +263,28 @@ public class Questions1 {
     // return currentString.toString();
     // }
 
-    public static boolean find132pattern(int[] nums) {
-        int n = nums.length;
-        int[] minLeft = new int[n];
-        minLeft[0] = nums[0];
-        for (int i = 1; i < n; i++) {
-            minLeft[i] = Math.min(minLeft[i - 1], nums[i]);
-        }
+    // public static boolean find132pattern(int[] nums) {
+    // int n = nums.length;
+    // int[] minLeft = new int[n];
+    // minLeft[0] = nums[0];
+    // for (int i = 1; i < n; i++) {
+    // minLeft[i] = Math.min(minLeft[i - 1], nums[i]);
+    // }
 
-        Stack<Integer> stack = new Stack<>();
-        for (int j = n - 1; j >= 0; j--) {
-            if (nums[j] > minLeft[j]) {
-                while (!stack.isEmpty() && stack.peek() <= minLeft[j]) {
-                    stack.pop();
-                }
-                if (!stack.isEmpty() && stack.peek() < nums[j]) {
-                    return true;
-                }
-                stack.push(nums[j]);
-            }
-        }
-        return false;
-    }
+    // Stack<Integer> stack = new Stack<>();
+    // for (int j = n - 1; j >= 0; j--) {
+    // if (nums[j] > minLeft[j]) {
+    // while (!stack.isEmpty() && stack.peek() <= minLeft[j]) {
+    // stack.pop();
+    // }
+    // if (!stack.isEmpty() && stack.peek() < nums[j]) {
+    // return true;
+    // }
+    // stack.push(nums[j]);
+    // }
+    // }
+    // return false;
+    // }
 
     // // Circular queue.
     // static class myCircularQueue {

@@ -16,6 +16,7 @@ public class BinaryTree {
             this.value = value;
         }
     }
+
     private Node root;
 
     // insert elements
@@ -117,5 +118,5 @@ public class BinaryTree {
         postOrder(node.right);
         System.out.print(node.value);
     }
-    
+
 }

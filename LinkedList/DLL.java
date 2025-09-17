@@ -32,6 +32,16 @@ public class DLL {
         node.prev = last;
     }
 
+    public void deleteFirst() {
+        if (head == null) {
+            return;
+        }
+        head = head.next;
+        if (head != null) {
+            head.prev = null;
+        }
+    }
+
     public Node find(int value) {
         Node node = head;
         while (node != null) {
