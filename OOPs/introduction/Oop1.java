@@ -57,7 +57,6 @@ class Student {
     // properties object by object
 
     // We need one word to access every object
-
     void greeting() {
         // System.out.println("Hello, my name is " + name);
         System.out.println("Hello, my name is " + this.name); // this is replaced with the name of the reference
@@ -77,7 +76,7 @@ class Student {
     }
 
     // Constructor is declared by the class name.
-    Student() {
+    public Student() {
         // This is how you call a constructor form another constructor
         // internally: new Student (13, "default person", 100.0f);
         this(13, "default person", 100.0f);

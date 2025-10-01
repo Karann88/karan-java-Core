@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Oop1",
+            "request": "launch",
+            "mainClass": "OOPs.introduction.Oop1",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
             "name": "kk",
             "request": "launch",
             "mainClass": "kk",
