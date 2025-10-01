@@ -6,6 +6,111 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Patterns",
+            "request": "launch",
+            "mainClass": "Patterns.Patterns",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Palindrome",
+            "request": "launch",
+            "mainClass": "Strings.Palindrome",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Greeting",
+            "request": "launch",
+            "mainClass": "Methods.Greeting",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "IsArmstrong",
+            "request": "launch",
+            "mainClass": "Methods.IsArmstrong",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "StringExample",
+            "request": "launch",
+            "mainClass": "Methods.StringExample",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Swap",
+            "request": "launch",
+            "mainClass": "Methods.Swap",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "VarArgs",
+            "request": "launch",
+            "mainClass": "Methods.VarArgs",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Reverse",
+            "request": "launch",
+            "mainClass": "Conditions_loops.Reverse",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Largest",
+            "request": "launch",
+            "mainClass": "Conditions_loops.Largest",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Fibo",
+            "request": "launch",
+            "mainClass": "Conditions_loops.Fibo",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "CountNum",
+            "request": "launch",
+            "mainClass": "Conditions_loops.CountNum",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "CheckCase",
+            "request": "launch",
+            "mainClass": "Conditions_loops.CheckCase",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "Conditions_loops.Calculator",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "Calculator",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "first_tutorial.Demo",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
             "name": "Oop1",
             "request": "launch",
             "mainClass": "OOPs.introduction.Oop1",

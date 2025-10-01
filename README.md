@@ -1,62 +1,64 @@
-# Java Core Practice & Learning Repository
 
-This repository is a comprehensive collection of Java programs, algorithms, and data structure implementations. It is designed for learning, practicing, and mastering core Java concepts, as well as preparing for coding interviews and competitive programming.
+# Java Core Concepts & DSA Practice
 
-## Project Structure
+This repository is a curated collection of Java programs, algorithms, and data structure implementations. It is intended for:
+- Learning and revising core Java concepts
+- Practicing data structures and algorithms (DSA)
+- Preparing for coding interviews and competitive programming
 
-The project is organized into topic-based folders and files, each focusing on a specific area of Java or computer science:
+## Contents
 
-- **Algorithms & Data Structures**
-	- `Sorting/` — Bubble Sort, Insertion Sort, Merge Sort, Quick Sort, Selection Sort, Cyclic Sort, and related questions
-	- `BinarySearch/` — Binary search, Rotated arrays, Mountain arrays, 2D matrix search
-	- `LinkedList/` — Singly, Doubly, and Circular Linked Lists, sorting, merging, and cycle detection
-	- `Trees/` — Binary Trees, BSTs, AVL Trees, Segment Trees, and tree-related questions
-	- `STACKSQUEUES/` — Stack and Queue implementations and problems
-	- `Recursion/` — Recursive algorithms, Fibonacci, N-Queens, permutations, and more
-	- `LargeNumbers/` — Factorial and operations on large numbers
-	- `LargeStrings/` — String manipulation and random string generation
-	- `Practice/` — Practice problems on arrays, matrices, and sorting
+### Algorithms & Data Structures
+- **Sorting/**: Bubble, Insertion, Merge, Quick, Selection, Cyclic Sort, and related problems
+- **BinarySearch/**: Binary search, Rotated arrays, Mountain arrays, 2D matrix search
+- **LinkedList/**: Singly, Doubly, Circular Linked Lists, sorting, merging, cycle detection
+- **Trees/**: Binary Trees, BSTs, AVL Trees, Segment Trees, tree questions
+- **STACKSQUEUES/**: Stack and Queue implementations, problems
+- **Recursion/**: Recursive algorithms, Fibonacci, N-Queens, permutations, etc.
+- **LargeNumbers/**: Factorial and large number operations
+- **LargeStrings/**: String manipulation, random string generation
+- **Practice/**: Array, matrix, and sorting practice problems
 
-- **Core Java Concepts**
-	- `OOPs/` — Object-Oriented Programming: abstraction, inheritance, interfaces, generics, static, singleton, and properties
-	- `Functions_In_Java/` — Function definitions and practice questions
-	- `FileHandling/` — File input/output operations
-	- `CollectionFW/` — Java Collections Framework: HashMap, Vector, CopyOnWriterArrayList, Comparator
+### Core Java & OOP
+- **OOPs/**: Abstraction, inheritance, interfaces, generics, static, singleton, properties
+- **Functions_In_Java/**: Function definitions, practice questions
+- **FileHandling/**: File input/output
+- **CollectionFW/**: HashMap, Vector, CopyOnWriterArrayList, Comparator
 
-- **Java 8 Features**
-	- `Java8/` — Lambda expressions, Stream API, and related examples
+### Java 8 Features
+- **Java8/**: Lambda expressions, Stream API, and more
 
-- **LeetCode & Competitive Programming**
-	- `LeetCode/` — Solutions to LeetCode problems
+### Competitive Programming
+- **LeetCode/**: LeetCode problem solutions
 
-- **Other Topics**
-	- `Arrays/` — Array basics and practice
-	- `Strings/` — String operations and builder usage
-	- `Patterns.java` — Pattern printing problems
-	- `TicTacToe.java` — Simple Tic Tac Toe game implementation
-	- `User.java` — User class example
+### Other Topics
+- **Arrays/**: Array basics, practice
+- **Strings/**: String operations, StringBuilder
+- **Patterns.java**: Pattern printing
+- **TicTacToe.java**: Simple game implementation
+- **User.java**: User class example
 
-## Getting Started
+## Usage
 
 1. **Clone the repository:**
-	 ```powershell
-	 git clone https://github.com/Karann88/karan-java-Core.git
-	 ```
-2. **Open in your IDE:**
-	 - Recommended: IntelliJ IDEA, Eclipse, or VS Code
+	```powershell
+	git clone https://github.com/Karann88/karan-java-Core.git
+	```
+2. **Open in your preferred IDE:**
+	- IntelliJ IDEA, Eclipse, or VS Code recommended
 3. **Compile and run Java files:**
-	 - Each file or folder contains independent programs. You can compile and run them individually:
-	 ```powershell
-	 javac Main.java
-	 java Main
-	 ```
-	 - For files in subfolders, navigate to the folder and run the above commands.
+	- Each file/folder contains independent programs. Compile and run as needed:
+	```powershell
+	javac Main.java
+	java Main
+	```
+	- For subfolders, navigate to the folder and run the above commands.
 
 ## Requirements
-- Java JDK 8 or higher (preferably latest LTS)
+- Java JDK 8 or higher (latest LTS recommended)
 
 ## Contributing
-Contributions, suggestions, and improvements are welcome! Feel free to open issues or submit pull requests.
+Contributions and suggestions are welcome! Please open an issue or submit a pull request.
 
 ## License
-This project is for educational purposes.
+For educational use.
