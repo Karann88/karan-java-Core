@@ -19,5 +19,9 @@ public class Main {
         car.startMusic();
         car.upgradeEngine();
         car.start();
+
+        NiceCar car2 = new NiceCar(new ElectricEngine());
+        car2.start();
+        car2.stop();
     }   
 }

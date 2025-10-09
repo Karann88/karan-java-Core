@@ -22,7 +22,7 @@ public class ObjectDemo {
     }
 
     @Override
-    public int hashCode() {  // Hashcode = A unique representation of an object via a number. 
+    public int hashCode() { // Hashcode = A unique representation of an object via a number.
         return super.hashCode();
     }
 
@@ -39,9 +39,9 @@ public class ObjectDemo {
     public static void main(String[] args) {
         ObjectDemo obj1 = new ObjectDemo(34, 78.6f);
         ObjectDemo obj2 = new ObjectDemo(43, 56.9f);
-        
-        // if (obj1 < obj2) {   // This is false.
-        //     System.out.println("obj1 is less than obj2");
+
+        // if (obj1 < obj2) { // This is false.
+        // System.out.println("obj1 is less than obj2");
         // }
 
         if (obj1 == obj2) {
@@ -53,8 +53,10 @@ public class ObjectDemo {
         }
 
         System.out.println(obj1.getClass().getName());
-        
-        // System.out.println(obj.hashCode());  // Give some random gpaue of object.
-        // System.out.println(obj2.hashCode()); // Hascode is not an address rather it's giving a random unique number via some algorithm.
+        System.out.println(obj2.getClass().getName());
+
+        // System.out.println(obj.hashCode()); // Give some random gpaue of object.
+        // System.out.println(obj2.hashCode()); // Hascode is not an address rather it's
+        // giving a random unique number via some algorithm.
     }
 }

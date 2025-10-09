@@ -6,6 +6,10 @@ public class Boxweight extends Box{
     public Boxweight() {
         this.weight = -1;
     }
+    // @Override    // static methods cannot be overridden because they are not part of the object.
+    static void greeting() {
+        System.out.println("Hey, I am in Boxweight class Greeting.");
+    }
 
     Boxweight(Boxweight other) {
         super(other);

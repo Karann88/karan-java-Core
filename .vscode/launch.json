@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOPs.interfaces.Main",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOPs.abstractDemo.Main",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "ObjectDemo",
+            "request": "launch",
+            "mainClass": "OOPs.access.ObjectDemo",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "SubClass",
+            "request": "launch",
+            "mainClass": "OOPs.access.SubClass",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "ObjectPrint",
+            "request": "launch",
+            "mainClass": "OOPs.properties.polymorphism.ObjectPrint",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Main1",
+            "request": "launch",
+            "mainClass": "OOPs.singleton.Main1",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
             "name": "Patterns",
             "request": "launch",
             "mainClass": "Patterns.Patterns",

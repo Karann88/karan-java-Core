@@ -1,6 +1,6 @@
 package OOPs.interfaces;
 
-public class PowerEngine implements Engine{
+public class PowerEngine implements Engine {
 
     @Override
     public void start() {

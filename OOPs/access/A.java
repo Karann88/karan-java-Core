@@ -1,7 +1,7 @@
 package OOPs.access;
 
 public class A {
-    // private int num; // we can access private via getters and setters method.
+    // private int num; // This is Data Hiding.   // we can access private via getters and setters method.
     protected int num;  // Access in Same package
     // int num;     // This is default access modifier which means we cannot access it outside the package.
     String name;
