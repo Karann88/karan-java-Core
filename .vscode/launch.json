@@ -8,6 +8,48 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "Cloning.Main",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ExceptionHandling.Main",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOPs.generics.comparing.Main",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOPs.generics.Main",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "CustomGenArrayList",
+            "request": "launch",
+            "mainClass": "OOPs.generics.CustomGenArrayList",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "CustomArrayList",
+            "request": "launch",
+            "mainClass": "OOPs.generics.CustomArrayList",
+            "projectName": "java_9ba14fbb"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "OOPs.interfaces.Main",
             "projectName": "java_9ba14fbb"
         },
