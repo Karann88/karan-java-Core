@@ -3,14 +3,14 @@ package OOPs.generics;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class CustomArrayList {
+public class CustomGenArrayList<T> {
 
-    private int[] data;
+    private Object[] data;
     private static int DEFAULT_SIZE = 10;
     private int size = 0; // also working as index value
 
-    public CustomArrayList() {
-        this.data = new int[DEFAULT_SIZE];
+    public CustomGenArrayList() {
+        this.data = new Object[DEFAULT_SIZE];
     }
 
     public void add(int num) {
@@ -25,7 +25,7 @@ public class CustomArrayList {
     }
 
     private void resize() {
-        int[] temp = new int[data.length * 2];
+        Object[] temp = new Object[data.length * 2];
         // copy the current items in the new array.
         for (int i = 0; i < data.length; i++) {
             temp[i] = data[i];
@@ -33,20 +33,20 @@ public class CustomArrayList {
         data = temp;
     }
 
-    public int remove() {
-        int removed = data[--size];
+    public T remove() {
+        T removed = (T) (data[--size]);
         return removed;
     }
 
-    public int get(int index) {
-        return data[index];
+    public T get(int index) {
+        return (T) data[index];
     }
 
     public int size() {
         return size;
     }
 
-    public void set(int index, int value) {
+    public void set(int index, T value) {
         data[index] = value;
     }
 
@@ -60,11 +60,17 @@ public class CustomArrayList {
 
     public static void main(String[] args) {
         // ArrayList list = new ArrayList();
-        CustomArrayList list = new CustomArrayList();
-        list.add(3);
-        list.add(5);
-        list.add(9);
+        // CustomArrayList list = new CustomArrayList();
+        // list.add(3);
+        // list.add(5);
+        // list.add(9);
 
+        // for (int i = 0; i < 14; i++) {
+        //     list.add(2 * i);
+        // }
+        // System.out.println(list);
+
+        CustomGenArrayList<Integer> list = new CustomGenArrayList<>();
         for (int i = 0; i < 14; i++) {
             list.add(2 * i);
         }

@@ -6,7 +6,6 @@ public class Main implements B{
     public void fun() {
 
     }
-
     @Override
     public void greet() {
         
