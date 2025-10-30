@@ -34,10 +34,31 @@ public class Main {
         // asList method has a fixed size.
         List<String>list1 = Arrays.asList("Monday", "Tuesday");
         System.out.println(list1.getClass().getName());
+        list1.set(0, "Sunday"); // This is allowed
+        // list1.add("Wednesday"); // UnsupportedOperationException
 
         String[] array = {"Apple", "Banana", "Cherry"};
         List<String> list2 = Arrays.asList(array);
         System.out.println(list2.getClass().getName());
+
+        List<String> list3 = List.of("Apple", "Banana", "Cherry"); // Immutable list
+        System.out.println(list3.getClass().getName());
+
+        List<String> list4 = new ArrayList<>(list2);    
+        list4.add("Blueberry"); // This is allowed
+        System.out.println(list4);
+
+        List<Integer> list5 = new ArrayList<>();
+        list5.add(10);
+        list5.add(20);
+        list5.add(30);
+        list5.add(2, 40);
+        System.out.println(list5);
+
+        List<Integer> list6 = List.of(1, 2, 3, 4); // Immutable list
+        list5.addAll(list6);
+        System.out.println(list5);
+        
     
         ArrayList<Integer> list = new ArrayList<>(11);
         list.add(1);
@@ -61,7 +82,7 @@ public class Main {
 
         list.remove(1);
         list.add(2, 50);
-        System.out.println(list);   // calls toString() method of ArrayList class
+        System.out.println(list);   // calls toString() method of ArrayList class.
         for (int x : list) {
             System.out.println(x);
         }
