@@ -16,7 +16,7 @@ import java.util.Vector;
 
 public class VectorDemo {
     public static void main(String[] args) {
-        Vector<Integer> v = new Vector<>(5, 3);
+        Vector<Integer> v = new Vector<>(5, 3);   // DEFAULT CAPACITY 10
         v.add(10);
         v.add(10);
         v.add(10);

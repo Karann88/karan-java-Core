@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+// Comparator is an interface from which we can perform custom sorting order.
+// It contains only one method compare().
+// It is present in java.util package.
+
 public class Comperator {
     public static void main(String[] args) {
 
@@ -25,6 +29,7 @@ public class Comperator {
         // }
         // });
 
+        // Through Java8 comparator methods.
         Comparator<Student> comparator = Comparator.comparing(Student::getCgpa).reversed()
                 .thenComparing(Student::getName);
 
@@ -35,10 +40,12 @@ public class Comperator {
 
         List<String> list2 = Arrays.asList("Apple", "Banana", "Pineapple");
         list2.sort(new StringLenComparator());
+        System.out.println(list2);
 
         // Through lambda expression
         list2.sort((o1, o2) -> o1.length() - o2.length());
-        // list2.sort((o1, o2) -> o2.length() - o1.length());
+        System.out.println(list2);
+        list2.sort((o1, o2) -> o2.length() - o1.length());
         System.out.println(list2);
 
         // ArrayList<Integer> list = new ArrayList<>();
@@ -74,15 +81,15 @@ class Student {
 
 // class MyComparator implements Comparator<Integer> {
 
-//     @Override
-//     public int compare(Integer o1, Integer o2) {
-//         // For ascending order
-//         // return o1 - o2;
+// @Override
+// public int compare(Integer o1, Integer o2) {
+// // For ascending order
+// // return o1 - o2;
 
-//         // For descending order
-//         return o2 - o1;
+// // For descending order
+// return o2 - o1;
 
-//     }
+// }
 // }
 
 class StringLenComparator implements Comparator<String> {
