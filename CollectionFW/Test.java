@@ -3,6 +3,13 @@ package CollectionFW;
 import java.util.Arrays;
 import java.util.LinkedList;
 
+// LinkedList in Java is a part of the Java Collections Framework. 
+// It implements the List and Deque interfaces, providing a doubly-linked list data structure.
+// Each element (node) in a LinkedList contains a reference to the previous and next node,
+// allowing for efficient insertions and deletions at both ends of the list as well as in the middle.
+// However, accessing elements by index is slower compared to an ArrayList,
+// as it requires traversing the list from the beginning or end to reach the desired index.
+
 public class Test {
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList<>();
@@ -19,9 +26,16 @@ public class Test {
         System.out.println(list);
 
         System.out.println(list.getFirst()); // Time Complexity O(1)
-        System.out.println(list.getLast()); // Time Complexity O(1));
+        System.out.println(list.getLast()); // Time Complexity O(1)
 
         list.removeFirst(); // Time Complexity O(1)
+        // list.removeLast(); // Time Complexity O(1)
+        System.out.println(list);
+
+        list.remove(2); // Time Complexity O(n)
+        System.out.println(list);
+
+        list.add(3, 10); // Time Complexity O(n)
         System.out.println(list);
 
         list.removeFirstOccurrence(2); // Time Complexity O(n)
@@ -29,6 +43,8 @@ public class Test {
 
         list.removeIf(x -> x % 2 == 0); // Time Complexity O(n)
         System.out.println(list);
+
+        System.out.println(list.contains(3));  // Time Complexity O(n)
 
         LinkedList<String> animals = new LinkedList<>(Arrays.asList("Dog", "Cat", "Elephant"));
         LinkedList<String> animalsToRemove = new LinkedList<>(Arrays.asList("Dog", "Lion")); 
